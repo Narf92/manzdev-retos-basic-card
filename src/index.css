@@ -1,1 +1,160 @@
+:root {
+  --card-width: 450px;
+  --card-height: 600px;
 
+  --avatar-width: 128px;
+  --avatar-height: 128px;
+
+  --header-img-width: 300px;
+  --header-img-height: 200px;
+
+  --manz-red: #ff3867;
+  --manz-yellow: #ffc873;
+  --manz-purple: #d37ec6;
+  --manz-brown: #a05d5d;
+  --manz-blue: #2d7cbf;
+  --manz-grey: #888888;
+
+  --card-body-color: #eeeeee;
+
+  --border-radius-card: 10px;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--manz-blue);
+  font-family: Poppins, Montserrat;
+}
+
+.card {
+  margin: auto;
+  justify-content: center;
+  height: var(--card-height);
+  width: var(--card-width);
+  background-color: var(--card-body-color);
+  border-radius: var(--border-radius-card);
+  box-shadow: 2px -2px 10px var(--manz-grey) inset,
+    -2px 0 10px var(--manz-grey) inset, -3px 3px 10px var(--manz-grey),
+    3px 0 10px var(--manz-grey);
+}
+
+.card-header {
+  display: flex;
+  border-radius: var(--border-radius-card) var(--border-radius-card) 0 0;
+  width: 100%;
+  height: var(--header-img-height);
+  background-image: url(https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+  background-size: contain;
+  border-bottom: 3px solid var(--manz-purple);
+
+  & .user-avatar {
+    margin: auto;
+    border: 3px solid var(--manz-purple);
+    width: var(--avatar-width);
+    height: var(--avatar-height);
+    transform: translateY(60px);
+    border-radius: 90%;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px 10px 40px;
+  height: 285px;
+
+  & h2 {
+    margin: 0;
+    font-weight: bolder;
+  }
+
+  & .location {
+    display: flex;
+  }
+
+  & .location .location-text {
+    font-size: 12px;
+    margin: 2px;
+    color: var(--manz-red);
+    font-style: italic;
+  }
+  & .location img {
+    height: 18px;
+    width: 18px;
+  }
+
+  & .description {
+    font-size: 14px;
+    color: var(--manz-grey);
+    font-weight: light;
+  }
+
+  & button {
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: var(--manz-blue);
+    border: 2px solid var(--manz-blue);
+    transition: ease 0.4s;
+    cursor: pointer;
+  }
+
+  & button:hover {
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: #fff;
+    background-color: var(--manz-blue);
+    border: 2px solid #fff;
+  }
+}
+
+.card-footer {
+  display: grid;
+  margin: 0 px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  border-top: 1px solid var(--manz-grey);
+
+  & .footer-cell {
+    margin: 0;
+    width: 70%;
+    padding: 10px 20px;
+  }
+  & .footer-cell:hover {
+    cursor: pointer;
+  }
+
+  & .inner {
+    border-left: 1px solid var(--manz-grey);
+    border-right: 1px solid var(--manz-grey);
+  }
+
+  & p {
+    text-align: center;
+    margin: 0;
+  }
+
+  & .cell-label {
+    font-size: 13px;
+    color: var(--manz-grey);
+  }
+
+  & .cell-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .cell-data p {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  & .cell-data img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+}

@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjeta de usuario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./index.css">
-  <script type="module" src="./index.js"></script>
-</head>
+  <body>
+    <div class="card">
+      <section class="card-header">
+        <img
+          class="user-avatar"
+          src="./assets/pochita.jpeg"
+          alt="Imagen de Pochita, personaje de ChainsawMan"
+        />
+      </section>
 
-<body>
+      <section class="card-body">
+        <h2>Narfflow</h2>
+        <div class="location">
+          <img
+            class="location-img"
+            src="assets/location.svg"
+            alt="Icono de los followers del usuario"
+          />
+          <p class="location-text">Premià de Dalt, Barcelona</p>
+        </div>
 
-</body>
+        <p class="description">
+          Narfflow es un dev que trabaja como analista y le gusta mucho lo de
+          programar. Su stack principalmente es React y tras varios años con
+          Java.
+        </p>
+        <p class="description">
+          Fuera de sus horas de trabajo le gusta probar con todo tipo de
+          tecnologías, ver anime, jugar a algunos juegos e ir al gimnasio.
+        </p>
+        <button>Follow</button>
+      </section>
 
+      <section class="card-footer">
+        <div class="footer-cell">
+          <p class="cell-label">Posts</p>
+          <div class="cell-data">
+            <img src="assets/post.svg" alt="Icono de los post del usuario" />
+            <p>1.200</p>
+          </div>
+        </div>
+        <div class="footer-cell inner">
+          <p class="cell-label">Followers</p>
+          <div class="cell-data">
+            <img
+              src="assets/person.svg"
+              alt="Icono de los followers del usuario"
+            />
+            <p>1.200</p>
+          </div>
+        </div>
+        <div class="footer-cell">
+          <p class="cell-label">Following</p>
+          <div class="cell-data">
+            <img
+              src="assets/person.svg"
+              alt="Iconos de los following del usuario"
+            />
+            <p>1.200</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
